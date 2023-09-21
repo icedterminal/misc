@@ -3,15 +3,16 @@ body{font-family:Rubik,Roboto,sans-serif !important;}
 .emby-tab-button-active{border-bottom: 3px solid;}
 /*.pageTitleWithDefaultLogo{background-image: ;}*/
 .pageTitleWithLogo {background-size: cover;width: 1.9em;}
+/* Need to rework the main content before these can be done.
 .itemsContainer, .vertical-list {
     display: -webkit-flex;
     display: flex;
-	/*flex-wrap: wrap; vertical scrolling */
+	flex-wrap: wrap; vertical scrolling 
     padding: 0px 0px 0px 20px;
     margin: 0px -20px 0px -20px;
-    /*width: fit-content; breaks touch */
+    width: fit-content; breaks touch 
 }
 .emby-scroller {
 	padding:0;
 	margin:0;
-}
+}*/
