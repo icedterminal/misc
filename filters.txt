@@ -1,0 +1,148 @@
+! UNIVERSAL
+! Blocks the "Sign in/up with Google" modal that appears on so many sites.
+||accounts.google.com/gsi/iframe^
+
+! BEST BUY
+! Hides the little circle "assistant" bottom right
+www.bestbuy.com##.shop-blue-assist
+
+! RAIDER.IO
+! Blocks an image asking you to not block ads.
+||cdnassets.raider.io/images/site/verts/zoneblock_bg_landscape.jpg$image
+! Cleans up the rest of the site
+raider.io##.fresnel-greaterThanOrEqual-xl.rio-right-pane.slds-shrink-none.slds-grow-none.slds-col, .slds-p-around--x-small.rio-hidden--small.slds-text-align--center, .slds-text-align--center.slds-m-top--small, .slds-align--absolute-center.slds-p-around--medium.rio-hidden--small
+raider.io##div.slds-col > div.fresnel-greaterThan-sm.fresnel-container:remove()
+raider.io###twitter-embed
+! These are CSS rules I used for a different extension. Leaving these here for my own reference.
+!.slds-text-align--center.rio-hidden--small.slds-p-around--x-small {display:none;}
+!.rio-right-pane {display:none !important;}
+!.slds-medium-nowrap.slds-wrap.slds-grid.slds-text-align--center.slds-p-around--small.rio-panel--patreon {display:none;}
+!.sticky-inner-wrapper > .slds-text-align--center {display:none;}
+!.rio-hidden--small.slds-p-around--medium.slds-align--absolute-center {display:none !important;}
+
+! TWITCH
+! Removes the front page carousel so you don't have to deal with auto play content.
+twitch.tv##main>div>div.simplebar-scroll-content>div>div>div>div.front-page-carousel:remove()
+
+! YOUTUBE
+! Hides YouTube TV promo shelf
+youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope
+! Hides promot content similar to Google doodles
+youtube.com###big-yoodle.ytd-rich-grid-renderer
+! Remove "Adblockers are not allowed" warning/pop-up
+youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
+youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
+youtube.com##+js(set, ytplayer.config.args.raw_player_response.adPlacements, [])
+youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
+! Four (4) Videos Grid tweaks
+! Skeleton before videos load
+youtube.com###home-page-skeleton .rich-grid-media-skeleton:style(max-width: 100% !important; margin: 0 4px 0 4px !important)
+! After vidoes load
+youtube.com###contents > ytd-rich-grid-row, #contents > ytd-rich-grid-row > #contents, [page-subtype="home"] #content.ytd-rich-section-renderer, [page-subtype="home"] ytd-rich-section-renderer, [page-subtype="sports"] #content.ytd-rich-section-renderer, [page-subtype="sports"] ytd-rich-section-renderer:style(display: contents !important)
+youtube.com##ytd-rich-grid-media:style(max-width: 100% !important; margin: 0 4px 0 4px !important)
+! Calcluations of margin and width
+youtube.com##ytd-rich-item-renderer[is-slim-grid]:last-of-type:style(margin-right: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+youtube.com##ytd-rich-item-renderer[is-slim-grid]:first-of-type:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+youtube.com##[page-subtype="home"] #contents.ytd-rich-grid-renderer, [page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer, [page-subtype="hashtag-landing-page"] #contents.ytd-rich-grid-renderer, [page-subtype="sports"] #contents.ytd-rich-grid-renderer:style(width: calc(100% - 3 * 1vw) !important)
+youtube.com##[page-subtype="home"] #dismissible.ytd-rich-shelf-renderer, [page-subtype="home"] #dismissed.ytd-rich-shelf-renderer, [page-subtype="sports"] #dismissible.ytd-rich-shelf-renderer:style(width: calc(100% - 0.2 * 1vw) !important)
+! Fixed margins
+youtube.com##ytd-rich-grid-row:style(--ytd-rich-grid-item-margin: 4px; !important)
+youtube.com###contents.ytd-rich-shelf-renderer:has(#video-title.ytd-rich-grid-media):style(--ytd-rich-grid-item-margin: 4px; !important)
+youtube.com##ytd-notification-multi-action-renderer[shelf-dismissal]:style(margin-top: 12px !important)
+youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
+youtube.com##[page-subtype="subscriptions"] #content.ytd-rich-section-renderer:style(margin: 0 8px !important)
+youtube.com##[page-subtype="home"] #content.ytd-rich-section-renderer > *.ytd-rich-section-renderer, [page-subtype="sports"] #content.ytd-rich-section-renderer > *.ytd-rich-section-renderer:style(order: -1 !important; margin-top: -40px !important)
+
+!youtube.com##.ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 5 !important)
+!youtube.com###avatar.ytd-rich-grid-media
+!youtube.com###avatar-link.ytd-rich-grid-media
+!youtube.com###home-page-skeleton .channel-avatar
+!youtube.com###endorsement.ytd-video-preview
+!youtube.com##.ytp-inline-preview-mode .ytp-paid-content-overlay
+!youtube.com##.skeleton-bg-color.ytd-ghost-grid-renderer
+!youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
+!youtube.com##[style="--ytd-rich-shelf-items-count: 4;"]:has(#video-title.ytd-rich-grid-media) #show-more-button .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text
+!youtube.com##[style="--ytd-rich-shelf-items-count: 5;"]:has(#video-title.ytd-rich-grid-media) #show-more-button .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text
+!youtube.com##ytd-rich-item-renderer:nth-child(4):has(#video-title.ytd-rich-grid-media)[hidden], ytd-rich-item-renderer:nth-child(5):has(#video-title.ytd-rich-grid-media)[hidden], .ytp-inline-preview-ui .ytp-subtitles-button, .ytp-inline-preview-ui .ytp-mute-button:style(display: block !important)
+!youtube.com##.ytp-inline-preview-mode button.ytp-subtitles-button.ytp-button::after:style(margin: 0 8px !important)
+!youtube.com###video-title.ytd-rich-grid-media:style(font-size: 1.4rem !important)
+!youtube.com##.ytd-rich-grid-media ytd-video-meta-block[rich-meta] #byline-container.ytd-video-meta-block, .ytd-rich-grid-media ytd-video-meta-block[rich-meta] #metadata-line.ytd-video-meta-block:style(font-size: 1.2rem !important)
+!youtube.com##[page-subtype="home"] .yt-core-image--content-mode-scale-aspect-fill:style(object-fit: fill !important)
+!youtube.com##[page-subtype="home"] ytd-rich-shelf-renderer, [page-subtype="sports"] ytd-rich-shelf-renderer:style(border: none !important)
+!youtube.com##ytd-rich-grid-media[mini-mode], ytd-rich-section-renderer[mini-mode] #content.ytd-rich-section-renderer:style(max-width: none !important)
+!youtube.com##ytd-thumbnail.ytd-rich-grid-media::before, ytd-playlist-thumbnail.ytd-rich-grid-media::before:style(background: none !important)
+
+! GITHUB
+! Pretty fonts
+gist.github.com##code, pre, .file-info, .blob-num, .blob-code-inner, .input-monospace:style(font-family:'Cascadia Code', mono !important;)
+github.com##body:style(font-family:'SF Pro Display' !important;)
+github.com##code, pre, .text-mono, .input-monospace, .blob-code-inner:style(font-family:'Cascadia Mono', mono !important;)
+! Fix disabling highlighting of repo name
+github.com##.FormControl-label:style(user-select:auto !important;)
+
+! NEWEGG
+! Hides Neweggs own Google sign in prompt
+newegg.com###GoogleSignPrompt
+newegg.com##.masker.opacity-30
+! Removes sponsored items at the top
+newegg.com##div.menu-box
+newegg.com##a.item-container:upward(.items-grid-view)
+! Removes sponsored row sidebar and expands the row body full width 
+newegg.com##.has-side-banner>.row-side
+newegg.com##.row.has-side-banner>.row-body:style(margin-right:0 !important;)
+
+! WOWHEAD
+! Cleans up wowhead
+wowhead.com##.sidebar-wrapper, .sidebar, .blocks, .element-highlight-dialog, .element-highlight-highlighter, .news-recent-content, .zaf-unit-wrapper, .premium-promo-row, #video-pos-page
+! Fonts.
+wowhead.com##body, h1, h2, h3, h4, h5, h6, .imitation-heading, .header-nav>a, .header-nav-features>a, .data-trees>a, #data-tree-switcher>div>a, .header-user>a:style(font-family:'SF Pro Display','Helvetica Now Display Regular','Helvetica Neue',Helvetica,Roboto,SegoeUI,sans-serif !important;)
+! Aligns some content
+wowhead.com###page-content:style(margin:0 !important;padding:0 !important;)
+wowhead.com##.news-recent[data-has-video-unit="true"]:style(grid-template-columns: 1fr 1fr !important;)
+! This fixes text flickering in Chromium browsers
+wowhead.com##.comment, .comment-content-column:style(-webkit-transform-style: preserve-3d !important;)
+
+! REDDIT
+! Hide automod stickied comments
+reddit.com##[data-testid="comment_author_link"][href="/user/AutoModerator/"]:upward(.Comment)
+
+! REDDIT MOBILE
+! Hides all the pop-ups and the bottom bar encouraging users to use the shit app.
+! Note that dismissing the initial bottom bar prompt will remove the class that intentionally disables scrolling.
+! Since we are hiding it, the scrolling will remain disabled. Buncha' dicks.
+reddit.com##.XPromoPopupRpl.m-active
+reddit.com##.XPromoBottomBar.m-consolidate
+reddit.com###bottom-sheet
+! Remove the css class that intentionally disables scrolling.
+reddit.com##body:remove-class(scroll-disabled)
+! For posts and subs only.
+! Body inline style that intentionally disables scrolling.
+reddit.com##body:style(overflow:auto !important;pointer-events:auto !important;)
+! Hides the bottom bar.
+reddit.com##.bottom-bar
+! Hides more posts you may be interested in
+reddit.com##.right-sidebar
+! Deletes the accept prompt tester.
+reddit.com###acceptabletest:remove()
+! Deletes the adblock tester.
+reddit.com###adblocktest:remove()
+! Deletes the blocking modal for NSFW subs. You still need to sign into reddit in Firefox to see the posts.
+!reddit.com###modal-dialog
+reddit.com##div.sidebar-grid:style(filter:none !important;)
+reddit.com##xpromo-nsfw-blocking-modal:remove()
+reddit.com##div.prompt
+
+! WEATHER.COM
+! Hides a myriad of useless crap.
+! NOTE: This makes the root (/) empty because it's all filler "news articles"
+weather.com##[id^=WxuContentMedia-], [id^=Taboola-sidebar-], [id^=WxuSmartMessage-sidebar-]
+weather.com##+js(remove-attr.js, disabled, #LocationSearch_input)
+
+! ACCUWEATHER
+! Aligns content and hides the useless "news articles"
+accuweather.com##.page-column-1:style(margin: 0 !important; width: 100% !important;)
+accuweather.com##.page-column-2
+
+! CORSAIR
+! Removes the large header
+corsair.com##.text-white.block.lg\:flex
