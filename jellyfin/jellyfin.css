@@ -29,7 +29,7 @@
     src: url(NSans-B.woff2) format('woff2');
 }
 
-body{font-family:Rubik,Roboto,sans-serif !important;}
+body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 .emby-tab-button-active{border-bottom: 3px solid;}
 /*.pageTitleWithDefaultLogo{background-image: ;}*/
 .pageTitleWithLogo {background-size: cover;width: 1.9em;}
