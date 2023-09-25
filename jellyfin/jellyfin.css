@@ -1,5 +1,10 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');*/
+/* Variables */
+:root {
+    --purple: #a85dc3;
+}
 
+/* Fonts */
+/*@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');*/
 @font-face {
     font-family: 'Netflix Sans';
     font-style: normal;
@@ -29,6 +34,7 @@
     src: url(NSans-B.woff2) format('woff2');
 }
 
+/* Various restyles */
 body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 .emby-tab-button-active{border-bottom: 3px solid;}
 /*.pageTitleWithDefaultLogo{background-image: ;}*/
@@ -46,3 +52,110 @@ body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 	padding:0;
 	margin:0;
 }*/
+
+/* Color Replacement */
+@media (hover: hover) and (pointer: fine) {
+    .paper-icon-button-light:hover:not(:disabled) {
+        color: var(--purple);
+    }
+}
+.paper-icon-button-light:active:not(:disabled) {
+    color: var(--purple);
+}
+.paper-icon-button-light.show-focus:focus {
+    color: var(--purple);
+}
+.button-submit {
+    background: var(--purple);
+}
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused {
+    color: var(--purple);
+}
+.itemSelectionPanel {
+    border: 1px solid var(--purple);
+}
+.selectionCommandsPanel {
+    background: var(--purple);
+}
+.upNextDialog-countdownText {
+    color: var(--purple);
+}
+.alphaPickerButton-tv:focus {
+    background-color: var(--purple);
+}
+.progressring-spiner {
+    border-color: var(--purple);
+}
+.button-flat:hover {
+    color: var(--purple);
+}
+.button-link {
+    color: var(--purple);
+}
+.emby-input:focus,
+.emby-textarea:focus {
+    border-color: var(--purple);
+}
+.emby-select-withcolor:focus {
+    border-color: var(--purple) !important;
+}
+.emby-select-tv-withcolor:focus {
+    background-color: var(--purple) !important;
+}
+.emby-checkbox:checked + span + .checkboxOutline {
+    border-color: var(--purple);
+}
+.emby-checkbox:checked + span + .checkboxOutline,
+.itemProgressBarForeground {
+    background-color: var(--purple);
+}
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
+    border-color: var(--purple);
+}
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--purple);
+}
+.navMenuOption-selected {
+    background: var(--purple) !important;
+}
+.emby-button.show-focus:focus {
+    background: var(--purple);
+}
+.emby-tab-button.show-focus:focus {
+    color: var(--purple);
+}
+.emby-tab-button:hover {
+    color: var(--purple);
+}
+.guide-channelHeaderCell:focus,
+.programCell:focus {
+    background-color: var(--purple) !important;
+}
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus {
+    color: var(--purple);
+}
+.guide-date-tab-button.show-focus:focus {
+    background-color: var(--purple);
+}
+.buttonActive {
+    color: var(--purple) !important;
+}
+.card:focus .cardBox.visualCardBox,
+.card:focus .cardBox:not(.visualCardBox) .cardScalable {
+    border-color: var(--purple) !important;
+}
+.metadataSidebarIcon {
+    color: var(--purple);
+}
+.emby-button.detailFloatingButton {
+    background-color: var(--purple);
+}
+.layout-tv .emby-button.detailFloatingButton:focus {
+    color: var(--purple);
+}
