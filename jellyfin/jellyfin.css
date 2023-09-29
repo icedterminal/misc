@@ -164,13 +164,23 @@ body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 .layout-tv .emby-button.detailFloatingButton:focus {
     color: var(--main-color);
 }
+.collapseContent, .formDialogFooter:not(.formDialogFooter-clear), .formDialogHeader:not(.formDialogHeader-clear), .paperList, .visualCardBox {
+    background-color: #181818;
+    border-radius: 0.4em;
+}
+.listItem-border {
+    border-color: #181818 !important;
+}
+.mainDrawer, .drawer-open {
+    background-color: #000;
+}
 
 /* Borders */
 .cardOverlayContainer, .cardContent, .cardBox:not(.visualCardBox) .cardPadder  {
     border-radius: 0.4em;
 }
 .emby-tab-button-active{
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #fff !important;
 }
 .emby-tab-button {
     border-bottom: 3px solid transparent;
