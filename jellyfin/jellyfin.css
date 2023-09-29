@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --purple: #a85dc3;
+    --main-color: #a85dc3;
 }
 
 /* Fonts */
@@ -36,7 +36,6 @@
 
 /* Various restyles */
 body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
-.emby-tab-button-active{border-bottom: 3px solid;}
 /*.pageTitleWithDefaultLogo{background-image: ;}*/
 .pageTitleWithLogo {background-size: cover;width: 1.9em;}
 /* Need to rework the main content before these can be done.
@@ -54,108 +53,125 @@ body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 }*/
 
 /* Color Replacement */
+.backgroundContainer {
+    background-color: #000;
+}
+.skinHeader-withBackground {
+    background-color: #000;
+}
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
-        color: var(--purple);
+        color: var(--main-color);
     }
 }
 .paper-icon-button-light:active:not(:disabled) {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .paper-icon-button-light.show-focus:focus {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .button-submit {
-    background: var(--purple);
+    background: var(--main-color);
 }
 .inputLabelFocused,
 .selectLabelFocused,
 .textareaLabelFocused {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .itemSelectionPanel {
-    border: 1px solid var(--purple);
+    border: 1px solid var(--main-color);
 }
 .selectionCommandsPanel {
-    background: var(--purple);
+    background: var(--main-color);
 }
 .upNextDialog-countdownText {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .alphaPickerButton-tv:focus {
-    background-color: var(--purple);
+    background-color: var(--main-color);
 }
 .progressring-spiner {
-    border-color: var(--purple);
+    border-color: var(--main-color);
 }
 .button-flat:hover {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .button-link {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .emby-input:focus,
 .emby-textarea:focus {
-    border-color: var(--purple);
+    border-color: var(--main-color);
 }
 .emby-select-withcolor:focus {
-    border-color: var(--purple) !important;
+    border-color: var(--main-color) !important;
 }
 .emby-select-tv-withcolor:focus {
-    background-color: var(--purple) !important;
+    background-color: var(--main-color) !important;
 }
 .emby-checkbox:checked + span + .checkboxOutline {
-    border-color: var(--purple);
+    border-color: var(--main-color);
 }
 .emby-checkbox:checked + span + .checkboxOutline,
 .itemProgressBarForeground {
-    background-color: var(--purple);
+    background-color: var(--main-color);
 }
 .emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
-    border-color: var(--purple);
+    border-color: var(--main-color);
 }
 .countIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .playedIndicator {
-    background: var(--purple);
+    background: var(--main-color);
 }
 .navMenuOption-selected {
-    background: var(--purple) !important;
+    background: var(--main-color) !important;
 }
 .emby-button.show-focus:focus {
-    background: var(--purple);
+    background: var(--main-color);
 }
 .emby-tab-button.show-focus:focus {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .emby-tab-button:hover {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .guide-channelHeaderCell:focus,
 .programCell:focus {
-    background-color: var(--purple) !important;
+    background-color: var(--main-color) !important;
 }
 .guide-date-tab-button.emby-tab-button-active,
 .guide-date-tab-button:focus {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .guide-date-tab-button.show-focus:focus {
-    background-color: var(--purple);
+    background-color: var(--main-color);
 }
 .buttonActive {
-    color: var(--purple) !important;
+    color: var(--main-color) !important;
 }
 .card:focus .cardBox.visualCardBox,
 .card:focus .cardBox:not(.visualCardBox) .cardScalable {
-    border-color: var(--purple) !important;
+    border-color: var(--main-color) !important;
 }
 .metadataSidebarIcon {
-    color: var(--purple);
+    color: var(--main-color);
 }
 .emby-button.detailFloatingButton {
-    background-color: var(--purple);
+    background-color: var(--main-color);
 }
 .layout-tv .emby-button.detailFloatingButton:focus {
-    color: var(--purple);
+    color: var(--main-color);
+}
+
+/* Borders */
+.cardOverlayContainer, .cardContent, .cardBox:not(.visualCardBox) .cardPadder  {
+    border-radius: 0.4em;
+}
+.emby-tab-button-active{
+    border-bottom: 3px solid #fff;
+}
+.emby-tab-button {
+    border-bottom: 3px solid transparent;
 }
