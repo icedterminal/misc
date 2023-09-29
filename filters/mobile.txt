@@ -1,0 +1,59 @@
+! UNIVERSAL
+! Blocks the "Sign in/up with Google" modal that appears on so many sites.
+||accounts.google.com/gsi/iframe^
+
+! BEST BUY
+! Hides the little circle "assistant" bottom right
+www.bestbuy.com##.shop-blue-assist
+
+! NEWEGG
+! Hides Neweggs own Google sign in prompt
+newegg.com###GoogleSignPrompt
+newegg.com##.masker.opacity-30
+! Removes sponsored items at the top
+newegg.com##div.menu-box
+newegg.com##a.item-container:upward(.items-grid-view)
+! Removes sponsored row sidebar and expands the row body full width 
+newegg.com##.has-side-banner>.row-side
+newegg.com##.row.has-side-banner>.row-body:style(margin-right:0 !important;)
+
+! WOWHEAD
+! Cleans up wowhead
+wowhead.com##.sidebar-wrapper, .sidebar, .blocks, .element-highlight-dialog, .element-highlight-highlighter, .news-recent-content, .zaf-unit-wrapper, .premium-promo-row, #video-pos-page
+! Fonts.
+wowhead.com##body, h1, h2, h3, h4, h5, h6, .imitation-heading, .header-nav>a, .header-nav-features>a, .data-trees>a, #data-tree-switcher>div>a, .header-user>a:style(font-family:'SF Pro Display','Helvetica Now Display Regular','Helvetica Neue',Helvetica,Roboto,SegoeUI,sans-serif !important;)
+! Aligns some content
+wowhead.com###page-content:style(margin:0 !important;padding:0 !important;)
+wowhead.com##.news-recent[data-has-video-unit="true"]:style(grid-template-columns: 1fr 1fr !important;)
+! This fixes text flickering in Chromium browsers
+wowhead.com##.comment, .comment-content-column:style(-webkit-transform-style: preserve-3d !important;)
+
+! REDDIT
+! Hide automod stickied comments
+reddit.com##[data-testid="comment_author_link"][href="/user/AutoModerator/"]:upward(.Comment)
+
+! REDDIT MOBILE
+! Hides all the pop-ups and the bottom bar encouraging users to use the shit app.
+! Note that dismissing the initial bottom bar prompt will remove the class that intentionally disables scrolling.
+! Since we are hiding it, the scrolling will remain disabled. Buncha' dicks.
+reddit.com##.XPromoPopupRpl.m-active
+reddit.com##.XPromoBottomBar.m-consolidate
+reddit.com###bottom-sheet
+! Remove the css class that intentionally disables scrolling.
+reddit.com##body:remove-class(scroll-disabled)
+! For posts and subs only.
+! Body inline style that intentionally disables scrolling.
+reddit.com##body:style(overflow:auto !important;pointer-events:auto !important;)
+! Hides the bottom bar.
+reddit.com##.bottom-bar
+! Hides more posts you may be interested in
+reddit.com##.right-sidebar
+! Deletes the accept prompt tester.
+reddit.com###acceptabletest:remove()
+! Deletes the adblock tester.
+reddit.com###adblocktest:remove()
+! Deletes the blocking modal for NSFW subs. You still need to sign into reddit in Firefox to see the posts.
+!reddit.com###modal-dialog
+reddit.com##div.sidebar-grid:style(filter:none !important;)
+reddit.com##xpromo-nsfw-blocking-modal:remove()
+reddit.com##div.prompt
