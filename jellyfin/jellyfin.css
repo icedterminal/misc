@@ -51,6 +51,9 @@ body{font-family:'Netflix Sans',Roboto,sans-serif !important;}
 	padding:0;
 	margin:0;
 }*/
+.btnForgotPassword {
+    display: none !important;
+}
 
 /* Color Replacement */
 .backgroundContainer {
