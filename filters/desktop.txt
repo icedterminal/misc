@@ -76,7 +76,7 @@ youtube.com##[page-subtype="home"] #content.ytd-rich-section-renderer > *.ytd-ri
 ! Pretty fonts
 gist.github.com##code, pre, .file-info, .blob-num, .blob-code-inner, .input-monospace:style(font-family:'Cascadia Code', mono !important;)
 github.com##body, .markdown-body:style(font-family:'SF Pro Display' !important;)
-github.com##code, pre, .text-mono, .input-monospace, .blob-code-inner:style(font-family:'Cascadia Mono', mono !important;)
+github.com##code, pre, .react-code-text, .text-mono, .input-monospace, .blob-code-inner:style(font-family:'Cascadia Mono', mono !important;)
 ! Fix disabling highlighting of repo name
 github.com##.FormControl-label:style(user-select:auto !important;)
 
