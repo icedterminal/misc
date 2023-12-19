@@ -10,7 +10,7 @@ www.bestbuy.com##.shop-blue-assist
 ! Blocks an image asking you to not block ads.
 ||cdnassets.raider.io/images/site/verts/zoneblock_bg_landscape.jpg$image
 ! Cleans up the rest of the site
-raider.io##.fresnel-greaterThanOrEqual-xl.rio-right-pane.slds-shrink-none.slds-grow-none.slds-col, .slds-p-around--x-small.rio-hidden--small.slds-text-align--center, .slds-text-align--center.slds-m-top--small, .slds-align--absolute-center.slds-p-around--medium.rio-hidden--small
+!raider.io##.fresnel-greaterThanOrEqual-xl.rio-right-pane.slds-shrink-none.slds-grow-none.slds-col, .slds-p-around--x-small.rio-hidden--small.slds-text-align--center, .slds-text-align--center.slds-m-top--small, .slds-align--absolute-center.slds-p-around--medium.rio-hidden--small
 !raider.io##div.slds-col > div.fresnel-greaterThan-sm.fresnel-container:remove()
 raider.io###twitter-embed
 ! These are CSS rules I used for a different extension. Leaving these here for my own reference.
@@ -76,7 +76,7 @@ youtube.com##[page-subtype="home"] #content.ytd-rich-section-renderer > *.ytd-ri
 ! Pretty fonts
 gist.github.com##code, pre, .file-info, .blob-num, .blob-code-inner, .input-monospace:style(font-family:'Cascadia Code', mono !important;)
 github.com##body, .markdown-body:style(font-family:'SF Pro Display' !important;)
-github.com##code, pre, .react-code-text, .text-mono, .input-monospace, .blob-code-inner:style(font-family:'Cascadia Mono', mono !important;)
+github.com##code, pre, .text-mono, .input-monospace, .blob-code-inner, .react-code-text, .react-code-line-contents, .react-code-text-cell:style(font-family:'Cascadia Mono', mono !important;)
 ! Fix disabling highlighting of repo name
 github.com##.FormControl-label:style(user-select:auto !important;)
 
