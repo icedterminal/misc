@@ -10,8 +10,8 @@ www.bestbuy.com##.shop-blue-assist
 ! Blocks an image asking you to not block ads.
 ||cdnassets.raider.io/images/site/verts/zoneblock_bg_landscape.jpg$image
 ! Cleans up the rest of the site
-!raider.io##.fresnel-greaterThanOrEqual-xl.rio-right-pane.slds-shrink-none.slds-grow-none.slds-col, .slds-p-around--x-small.rio-hidden--small.slds-text-align--center, .slds-text-align--center.slds-m-top--small, .slds-align--absolute-center.slds-p-around--medium.rio-hidden--small
-!raider.io##div.slds-col > div.fresnel-greaterThan-sm.fresnel-container:remove()
+raider.io##.fresnel-greaterThanOrEqual-xl.rio-right-pane.slds-shrink-none.slds-grow-none.slds-col, .slds-p-around--x-small.rio-hidden--small.slds-text-align--center, .slds-text-align--center.slds-m-top--small, .slds-align--absolute-center.slds-p-around--medium.rio-hidden--small
+raider.io##div.slds-col > div.fresnel-greaterThan-sm.fresnel-container > div.rio-hidden--small:remove()
 raider.io###twitter-embed
 ! These are CSS rules I used for a different extension. Leaving these here for my own reference.
 !.slds-text-align--center.rio-hidden--small.slds-p-around--x-small {display:none;}
