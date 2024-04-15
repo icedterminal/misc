@@ -23,6 +23,10 @@ raider.io###twitter-embed
 ! TWITCH
 ! Removes the front page carousel so you don't have to deal with auto play content.
 twitch.tv##main>div>div.simplebar-scroll-content>div>div>div>div.front-page-carousel:remove()
+! Adjusts the video editor panel
+dashboard.twitch.tv##div.edit-video-properties-modal__content:style(max-width:90vw !important; width:90vw !important;)
+dashboard.twitch.tv##div.iZovox:style(max-width:70% !important; flex-basis:70% !important;)
+dashboard.twitch.tv##div.izeIqF:style(max-width:30% !important; flex-basis:30% !important;)
 
 ! YOUTUBE
 ! Hides YouTube TV promo shelf
@@ -109,32 +113,6 @@ wowhead.com##.comment, .comment-content-column:style(-webkit-transform-style: pr
 ! REDDIT
 ! Hide automod stickied comments
 reddit.com##[data-testid="comment_author_link"][href="/user/AutoModerator/"]:upward(.Comment)
-
-! REDDIT MOBILE
-! Hides all the pop-ups and the bottom bar encouraging users to use the shit app.
-! Note that dismissing the initial bottom bar prompt will remove the class that intentionally disables scrolling.
-! Since we are hiding it, the scrolling will remain disabled. Buncha' dicks.
-reddit.com##.XPromoPopupRpl.m-active
-reddit.com##.XPromoBottomBar.m-consolidate
-reddit.com###bottom-sheet
-! Remove the css class that intentionally disables scrolling.
-reddit.com##body:remove-class(scroll-disabled)
-! For posts and subs only.
-! Body inline style that intentionally disables scrolling.
-reddit.com##body:style(overflow:auto !important;pointer-events:auto !important;)
-! Hides the bottom bar.
-reddit.com##.bottom-bar
-! Hides more posts you may be interested in
-reddit.com##.right-sidebar
-! Deletes the accept prompt tester.
-reddit.com###acceptabletest:remove()
-! Deletes the adblock tester.
-reddit.com###adblocktest:remove()
-! Deletes the blocking modal for NSFW subs. You still need to sign into reddit in Firefox to see the posts.
-!reddit.com###modal-dialog
-reddit.com##div.sidebar-grid:style(filter:none !important;)
-reddit.com##xpromo-nsfw-blocking-modal:remove()
-reddit.com##div.prompt
 
 ! WEATHER.COM
 ! Hides a myriad of useless crap.
