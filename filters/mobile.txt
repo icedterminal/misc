@@ -5,6 +5,8 @@
 ! BEST BUY
 ! Hides the little circle "assistant" bottom right
 www.bestbuy.com##.shop-blue-assist
+! Hides the top promo/ad
+www.bestbuy.com##.shop-pushdown-ad
 
 ! NEWEGG
 ! Hides Neweggs own Google sign in prompt
