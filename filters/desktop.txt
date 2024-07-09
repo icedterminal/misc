@@ -1,3 +1,7 @@
+[Adblock Plus 2.0]
+! Version: 20240708
+! Title: icedterminal desktop filter
+
 ! UNIVERSAL
 ! Blocks the "Sign in/up with Google" modal that appears on so many sites.
 ||accounts.google.com/gsi/iframe^
