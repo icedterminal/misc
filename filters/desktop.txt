@@ -113,6 +113,7 @@ wowhead.com##body, h1, h2, h3, h4, h5, h6, .imitation-heading, .header-nav>a, .h
 ! Aligns some content
 wowhead.com###page-content:style(margin:0 !important;padding:0 !important;)
 wowhead.com##.news-recent[data-has-video-unit="true"]:style(grid-template-columns: 1fr 1fr !important;)
+wowhead.com###announcement-0:style(height:250px;)
 ! This fixes text flickering in Chromium browsers
 wowhead.com##.comment, .comment-content-column:style(-webkit-transform-style: preserve-3d !important;)
 
