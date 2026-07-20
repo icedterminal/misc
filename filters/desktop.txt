@@ -105,6 +105,10 @@ newegg.com##a.item-container:upward(.items-grid-view)
 newegg.com##.has-side-banner>.row-side
 newegg.com##.row.has-side-banner>.row-body:style(margin-right:0 !important;)
 
+! WAYFAIR
+! Hides cred login
+wayfair.com##credential_picker_container
+
 ! WOWHEAD
 ! Cleans up wowhead
 wowhead.com##.sidebar-wrapper, .sidebar, .blocks, .element-highlight-dialog, .element-highlight-highlighter, .news-recent-content, .zaf-unit-wrapper, .premium-promo-row, #video-pos-page
