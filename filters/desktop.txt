@@ -107,7 +107,7 @@ newegg.com##.row.has-side-banner>.row-body:style(margin-right:0 !important;)
 
 ! WAYFAIR
 ! Hides cred login
-wayfair.com##credential_picker_container
+wayfair.com###credential_picker_container
 
 ! WOWHEAD
 ! Cleans up wowhead
