@@ -28,7 +28,7 @@ raider.io###twitter-embed
 
 ! TWITCH
 ! Removes the front page carousel so you don't have to deal with auto play content.
-twitch.tv##main>div>div.simplebar-scroll-content>div>div>div>div.front-page-carousel:remove()
+twitch.tv##body>div>div>div>div>main>div>div>div>div.front-page-carousel:remove()
 ! Adjusts the video editor panel
 dashboard.twitch.tv##div.edit-video-properties-modal__content:style(max-width:90vw !important; width:90vw !important;)
 dashboard.twitch.tv##div.iZovox:style(max-width:70% !important; flex-basis:70% !important;)
