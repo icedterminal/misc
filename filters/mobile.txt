@@ -41,3 +41,16 @@ reddit.com##[data-testid="comment_author_link"][href="/user/AutoModerator/"]:upw
 ! REDDIT MOBILE
 ! Hides all the pop-ups and the bottom bar encouraging users to use the shit app.
 reddit.com###configured-xpromo-mweb3x_mid_funnel_blocking_v1_30s
+reddit.com##.XPromoPopupRpl.m-active
+reddit.com##.XPromoBottomBar.m-consolidate
+reddit.com###bottom-sheet
+reddit.com##body:remove-class(scroll-disabled)
+reddit.com##body:style(overflow:auto !important;pointer-events:auto !important;)
+reddit.com##.bottom-bar
+reddit.com##.right-sidebar
+reddit.com###acceptabletest:remove()
+reddit.com###adblocktest:remove()
+!reddit.com###modal-dialog
+reddit.com##div.sidebar-grid:style(filter:none !important;)
+reddit.com##xpromo-nsfw-blocking-modal:remove()
+reddit.com##div.prompt
